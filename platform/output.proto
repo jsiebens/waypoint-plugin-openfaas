@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+
+package platform;
+
+option go_package = "github.com/jsiebens/waypoint-plugin-openfaas/platform";
+
+// You can customise this message to change the fields for
+// the output value from your Deployment
+message Deployment {
+  string function_name = 1;
+  string namespace = 2;
+}
