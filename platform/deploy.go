@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/waypoint-plugin-sdk/component"
 	"github.com/hashicorp/waypoint-plugin-sdk/terminal"
 	"github.com/hashicorp/waypoint/builtin/docker"
@@ -17,7 +16,6 @@ func (p *Platform) DeployFunc() interface{} {
 }
 
 func (p *Platform) deploy(ctx context.Context,
-	log hclog.Logger,
 	src *component.Source,
 	img *docker.Image,
 	deployConfig *component.DeploymentConfig,
